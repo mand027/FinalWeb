@@ -1,0 +1,51 @@
+<section class="colored-section hero-header">
+<div class="container">
+<h1 class="boldtext">Registro</h1>
+<form #companyForm="ngForm" (ngSubmit)="submitCompany(companyForm.form);">
+        <p>Usuario</p>
+<input type="text" 
+       class="form-control" 
+       name="usuario"
+       ngModel
+       #nameField="ngModel"
+       required
+       minlength="3">    
+
+    <p>Correo electrónico</p>
+<input type="email" 
+       class="form-control" 
+       name="correo"
+       ngModel
+       #nameField="ngModel"
+       minlength="3">    
+
+    
+<div class="form-group">
+    <label for="password">Contraseña</label>
+    <input 
+      type="password" 
+      id="password" 
+      class="form-control" >    
+  </div>
+  <div class="form-group">
+    <label for="confirmPassword">Confirma tu contraseña</label>
+    <input 
+      type="password" 
+      class="form-control" 
+      id="confirmPassword">
+  </div>
+    
+        <p>Teléfono</p>
+<input type="text" 
+       class="form-control" 
+       name="usuario"
+       ngModel
+       #nameField="ngModel"
+       required
+       minlength="8">      
+    </form>
+        <button class="btn btn-primary" [disabled]="!companyForm.valid">Submit</button>                   
+    </div>
+
+</section>
+                

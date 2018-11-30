@@ -1,0 +1,27 @@
+<section class="colored-section hero-header">
+<div class="container">
+<h1 class="boldtext">Ingresa</h1>
+<form #companyForm="ngForm" (ngSubmit)="submitCompany(companyForm.form);">
+        <p>Usuario</p>
+<input type="text" 
+       class="form-control" 
+       name="usuario"
+       ngModel
+       #nameField="ngModel"
+       required
+       minlength="3">    
+
+<div class="form-group">
+    <label for="password">Contraseña</label>
+    <input 
+      type="password" 
+      id="password" 
+      class="form-control" >    
+  </div>
+<button class="btn btn-primary" [disabled]="!companyForm.valid">Submit</button> 
+    </form>
+    </div>
+</section>
+   
+    
+                
