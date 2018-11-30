@@ -1,0 +1,36 @@
+<section class="colored-section hero-header">
+    <div class="container bg-success" >
+        <h1>Empresa</h1>
+        <h2>Encargado</h2>
+
+        <form #companyForm="ngForm" (ngSubmit)="submitCompany(companyForm.form);">
+            <p>Usuario</p>
+            <input type="text" 
+                   class="form-control" 
+                   name="usuario"
+                   ngModel
+                   #nameField="ngModel"
+                   required
+                   minlength="3">    
+
+            <p>Puntos a entregar:</p>
+            <input type="text" 
+                   class="form-control" 
+                   name="usuario"
+                   ngModel
+                   #nameField="ngModel"
+                   required
+                   minlength="3"> 
+
+            <a href="ingresa.html" class="btn btn-outline-white btn-round page-scroll">
+                Subir fotografía
+            </a>
+
+            <button class="btn btn-primary" [disabled]="!companyForm.valid">Submit</button> 
+        </form>
+    </div>
+    <div #googleMap style=”width:300%;height:300px”></div>
+
+</section>
+
+

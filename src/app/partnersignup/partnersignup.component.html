@@ -1,0 +1,67 @@
+<section class="colored-section hero-header">
+<div class="container" >
+    <h1 class="boldtext">Registro</h1>
+<button class="btn btn-primary" [disabled]="!companyForm.valid">Submit</button>                    
+
+<form #companyForm="ngForm" (ngSubmit)="submitCompany(companyForm.form);">
+        <p>Nombre del Centro</p>
+<input type="text" 
+       class="form-control" 
+       name="usuario"
+       ngModel
+       #nameField="ngModel"
+       required
+       minlength="3">    
+
+        <p>Nombre del encargado</p>
+<input type="text" 
+       class="form-control" 
+       name="nombre"
+       ngModel
+       #nameField="ngModel"
+       required
+       minlength="3">    
+
+    <p>Correo electrónico</p>
+<input type="email" 
+       class="form-control" 
+       name="correo"
+       ngModel
+       #nameField="ngModel"
+       minlength="3">    
+
+    
+<div class="form-group">
+    <label for="password">Contraseña</label>
+    <input 
+      type="password" 
+      id="password" 
+      class="form-control" >    
+  </div>
+  <div class="form-group">
+    <label for="confirmPassword">Confirma tu contraseña</label>
+    <input 
+      type="password" 
+      class="form-control" 
+      id="confirmPassword">
+  </div>    
+    
+    <p>Delegación</p>
+
+<select class="form-control" 
+        name="company-industry"
+        ngModel
+        #industryField="ngModel"
+        required>
+    <option *ngFor="let industry of industries" 
+        [value]="industry.id">
+        {{ industry.name }}
+</option> 
+    </select>
+    </form>
+    </div>
+
+    
+                   
+                    
+                
