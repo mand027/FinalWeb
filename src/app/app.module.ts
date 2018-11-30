@@ -12,6 +12,7 @@ import { UserempresaComponent } from './userempresa/userempresa.component';
 import { FormUserCompComponent } from './form-user-comp/form-user-comp.component';
 import { FormsModule } from '@angular/forms';
 import { ContactFormComponentComponent } from './contact-form-component/contact-form-component.component';
+import { EmpresaPublicComponent } from './empresa-public/empresa-public.component';
 
 const appRoutes: Routes = [
 {path: 'user', component: UserComponent},
@@ -33,7 +34,8 @@ const appRoutes: Routes = [
     UserComponent,
     UserempresaComponent,
     FormUserCompComponent,
-    ContactFormComponentComponent
+    ContactFormComponentComponent,
+    EmpresaPublicComponent
   ],
   imports: [
     BrowserModule,
