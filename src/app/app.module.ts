@@ -12,6 +12,7 @@ import { UserempresaComponent } from './userempresa/userempresa.component';
 import { FormUserCompComponent } from './form-user-comp/form-user-comp.component';
 import { FormsModule } from '@angular/forms';
 import { ContactFormComponentComponent } from './contact-form-component/contact-form-component.component';
+<<<<<<< HEAD
 import { HomeComponent } from './home/home.component';
 import { SpotifyService } from './services/spotify.service';
 
@@ -29,6 +30,9 @@ import { AgmCoreModule } from '@agm/core';
 import { EditarmapaComponent } from './editarmapa/editarmapa.component';
 //import { MapaEditarComponent } from './mapa-editar.component';
 
+=======
+import { EmpresaPublicComponent } from './empresa-public/empresa-public.component';
+>>>>>>> 7794ea404aedca90775cc819439301c5bc030db6
 
 const appRoutes: Routes = [
 {path: 'user', component: UserComponent},
@@ -53,10 +57,14 @@ const appRoutes: Routes = [
     UserempresaComponent,
     FormUserCompComponent,
     ContactFormComponentComponent,
+<<<<<<< HEAD
     HomeComponent,
     EmpresaPublicComponent,
     EditarmapaComponent,
   //  MapaEditarComponent
+=======
+    EmpresaPublicComponent
+>>>>>>> 7794ea404aedca90775cc819439301c5bc030db6
   ],
   imports: [
     BrowserModule,
