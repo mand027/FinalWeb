@@ -12,6 +12,23 @@ import { UserempresaComponent } from './userempresa/userempresa.component';
 import { FormUserCompComponent } from './form-user-comp/form-user-comp.component';
 import { FormsModule } from '@angular/forms';
 import { ContactFormComponentComponent } from './contact-form-component/contact-form-component.component';
+import { HomeComponent } from './home/home.component';
+import { SpotifyService } from './services/spotify.service';
+
+//importing angular material, animation
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import { HttpClientModule } from '@angular/common/http';
+import { EmpresaPublicComponent } from './empresa-public/empresa-public.component';
+// MaterialModule
+import { MaterialModule } from './material.module';
+
+//Angular maps
+
+import { AgmCoreModule } from '@agm/core';
+import { EditarmapaComponent } from './editarmapa/editarmapa.component';
+//import { MapaEditarComponent } from './mapa-editar.component';
+
 
 const appRoutes: Routes = [
 {path: 'user', component: UserComponent},
@@ -20,6 +37,8 @@ const appRoutes: Routes = [
 {path: 'partnersignup', component: PartnersignupComponent},
 {path: 'userempresa', component: UserempresaComponent},
 {path: 'signup', component: SignupComponent},
+{path: 'home', component: HomeComponent},
+{path: 'maps', component: EmpresaPublicComponent},
 {path: '', redirectTo: '/main', pathMatch: 'full'}
 ];
 
@@ -33,14 +52,26 @@ const appRoutes: Routes = [
     UserComponent,
     UserempresaComponent,
     FormUserCompComponent,
-    ContactFormComponentComponent
+    ContactFormComponentComponent,
+    HomeComponent,
+    EmpresaPublicComponent,
+    EditarmapaComponent,
+  //  MapaEditarComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBo_yYzDg-znlZfLyBJAZDPiR9x80lhh3E'
+    }),
+    MaterialModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    SpotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
