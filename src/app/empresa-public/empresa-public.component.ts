@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { Marcador } from '../classes/marcador.class';
 import { MatSnackBar } from '@angular/material';
 
 
 import {MatDialog, MatDialogRef} from '@angular/material';
 
-=======
->>>>>>> 7794ea404aedca90775cc819439301c5bc030db6
 
 @Component({
   selector: 'app-empresa-public',
@@ -16,7 +13,6 @@ import {MatDialog, MatDialogRef} from '@angular/material';
 })
 export class EmpresaPublicComponent implements OnInit {
 
-<<<<<<< HEAD
   marcadores: Marcador[] = [];
 
   lat = 19.283769;
@@ -38,14 +34,10 @@ export class EmpresaPublicComponent implements OnInit {
     }
 
   }
-=======
-  constructor() { }
->>>>>>> 7794ea404aedca90775cc819439301c5bc030db6
 
   ngOnInit() {
   }
 
-<<<<<<< HEAD
   agregarMarcador( evento ){
 
     const coords = evento.coords;
@@ -66,6 +58,4 @@ export class EmpresaPublicComponent implements OnInit {
     localStorage.setItem('marcadores', JSON.stringify( this.marcadores ));
   }
 
-=======
->>>>>>> 7794ea404aedca90775cc819439301c5bc030db6
 }
