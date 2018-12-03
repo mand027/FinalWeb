@@ -1,25 +1,99 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col">
 
-<mat-card>
-  <mat-card-title>Mapa Reciclamex</mat-card-title>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Datos de la empresa</th>
 
-  <mat-card-content>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+
+                    <td>Nombre de la empresa:</td>
+                    <td>Recicladora Atlacomulco</td>
+                </tr>
+                <tr>
+
+                    <td>Nombre del encargado:</td>
+                    <td>Alfredo del Mazo</td>
+                </tr>
+                <tr>
+
+                    <td>Contacto de la empresa:</td>
+                    <td>55 17 35 43 10</td>
+                </tr>
+                <tr>
+
+                    <td>Direccion:</td>
+                    <td>Edo de Mexico, Atlaculco, Abasolo 21 23456</td>
+                </tr>
 
 
-    <agm-map (mapClick)="agregarMarcador( $event )" [latitude]="lat" [longitude]="lng" [zoom]="15">
-      <agm-marker *ngFor="let marcador of marcadores; let i = index" [latitude]="marcador.lat" [longitude]="marcador.lng">
-        <agm-info-window>
-          <strong class="black-font">{{marcador.titulo}}</strong>
-            <p class="black-font">
-              {{marcador.desc}}
-            </p>
+            </tbody>
+        </table>
 
-            <div>
-              <button mat-raised-button color="primary">Editar</button>
-              <button (click)="borrarMarcador(i)" mat-raised-button color="warn">Borrar</button>
-            </div>
-        </agm-info-window>
-      </agm-marker>
-    </agm-map>
 
-  </mat-card-content>
-</mat-card>
+
+
+    </div>
+
+    <div class="col">
+
+        <img src="https://newmusicshelf.com/wp-content/uploads/blank-profile-picture.png" alt="Smiley face" height="300" width="300">
+
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+
+    <div class="col-4 col-xs-0">
+    </div>
+
+    <div class="col-6 col-xs-12">
+
+    </div>
+
+    <div class="col-2 col-xs-0">
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col">
+        <mat-card>
+          <mat-card-title>Mapa Reciclamex</mat-card-title>
+
+          <mat-card-content>
+
+
+            <agm-map (mapClick)="agregarMarcador( $event )" [latitude]="lat" [longitude]="lng" [zoom]="15">
+              <agm-marker *ngFor="let marcador of marcadores; let i = index" [latitude]="marcador.lat" [longitude]="marcador.lng">
+                <agm-info-window>
+                  <strong class="black-font">{{marcador.titulo}}</strong>
+                    <p class="black-font">
+                      {{marcador.desc}}
+                    </p>
+
+                    <div>
+                      <button mat-raised-button color="primary">Editar</button>
+                      <button (click)="borrarMarcador(i)" mat-raised-button color="warn">Borrar</button>
+                    </div>
+                </agm-info-window>
+              </agm-marker>
+            </agm-map>
+
+          </mat-card-content>
+        </mat-card>
+    </div>
+
+  </div>
+</div>
